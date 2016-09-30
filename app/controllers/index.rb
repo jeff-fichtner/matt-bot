@@ -1,18 +1,20 @@
-# route
-post '/' do
+trigger = "chuck norris"
 
-  message = request["text"] # the text in the message
-  username = request["user_name"] # the username of the author
+# route
+post '/matt' do
+
+  message = request["text"] # yes, it's literally that simple
+  username = request["user_name"]
 
   # security token
-  return 401 unless request["token"] == ENV["SLACK_TOKEN"] # environment var
+  return 401 unless request["token"] == ENV["SLACK_TOKEN"]
   # it won't listen to itself
-  return 200 if username == "slackbot" # or whatever your bot is named
+  return 200 if username == "slackbot"
 
-  if message # matches a certain condition
-    # sleep(2) optional
+  if message.downcase.include? trigger
+    sleep(2)
     return JSON.dump({
-      "text" => # response
+      "text" => Faker::ChuckNorris.fact
     })
   end
 
