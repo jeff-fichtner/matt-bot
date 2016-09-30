@@ -1,7 +1,7 @@
 trigger = "chuck norris"
 
 # route
-post '/matt' do
+post '/' do
 
   message = request["text"]
   username = request["user_name"]
