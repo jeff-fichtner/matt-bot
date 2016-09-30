@@ -3,7 +3,7 @@ trigger = "chuck norris"
 # route
 post '/matt' do
 
-  message = request["text"] # yes, it's literally that simple
+  message = request["text"]
   username = request["user_name"]
 
   # security token
