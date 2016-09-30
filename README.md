@@ -1,6 +1,6 @@
-##Slack Bot: A slack bot skeleton
+##Matt Baker slack bot
 
-A create-your-own setup for a slack bot on your favorite team channels.
+A bro-bot of sorts.
 
 jeff-fichtner
 KylePDorsey
